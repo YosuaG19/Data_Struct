@@ -1,1 +1,1 @@
-# Data_Struct Yosua Wibisono Gozlai
+# Data_Struct Yosua Wibisono Gozali
