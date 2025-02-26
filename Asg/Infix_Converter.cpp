@@ -55,18 +55,18 @@ void prefix(struct nodes* root) {
 }
 
 int search_root(char eq[], int start, int end){
-    int index_t = -1, value_t = 10;
+    int index_t = strlen(eq), value_t = 10;
     // int index_t = 1000, value_t = 10;
 
     int index_n, value_n;
     if (end == start) return start;
 
-    for (int i = end ; i <= start ; i++){
+    for (int i = start ; i >= end ; i--){
     // for (int i = start ; i >= end ; i--){   
         if (is_opt(eq[i])) {
             index_n = i, value_n = value_converter(eq[i]);
             // if (index_n < index_t && value_n <= value_t){
-            if (index_n > index_t && value_n < value_t){
+            if (index_n < index_t && value_n < value_t){
                 index_t = index_n, value_t = value_n;
             }
         }
